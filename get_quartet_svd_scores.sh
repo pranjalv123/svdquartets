@@ -1,8 +1,10 @@
 #!/bin/bash
 
-FNAME=get_quartet_svd_scores.fifo
+cd ~/svdquartets_data/svdquartets
+
+FNAME=fifo_get_quartet_svd_scores.fifo
 mkfifo $FNAME 
-./paup4a142_osx_leopard < $FNAME & 
+./paup4a142_osx_leopard -n < $FNAME & 
 echo "tonexus format=PHYLIP fromfile=data.phy tofile=data.nex;"  > $FNAME #changes data.phy from PHYLIP format to NEXUS format"
 echo "Execute data.nex;" > $FNAME                                         #adds data block data.nex
 echo "SVDQuartets showScores=yes nquartets=50;" > $FNAME                  #runs SVDQuartets with SVD scores displayed for each quartet
