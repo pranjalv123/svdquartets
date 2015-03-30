@@ -1,0 +1,7 @@
+begin paup;
+Execute data.nex;
+log file=paup_quartet_trees.txt start;
+SVDQuartets showScores=yes nquartets=1000;                  
+log stop;
+end;
+quit;
