@@ -1,1 +1,4 @@
 Scripts for working with SVDQuartets (open source PAUP* version). 
+
+The file convert_phy_to_nexus.sh requires the python library bioscripts. The file data_cleaning.sh converts a folder of phylip
+data to nexus format and changes the alignment identifier from protein to dna. 
